@@ -39,6 +39,29 @@ namespace LinkedLists
             }
         }
 
+        public void FindByValue(int a)
+        {
+            Node current = this.head;
+            if (current.data == a)
+            {
+                Console.WriteLine($"Value {a} has been found");
+            } else
+            {
+                while (current.next != null)
+                {
+                    if(current.next.data == a)
+                    {
+                        Console.WriteLine($"Value {a} has been found");
+                        return;
+                    } else
+                    {
+                        current = current.next;
+                    }
+                }
+                Console.WriteLine($"Value {a} has not been found");
+            }
+        }
+
         public void PrintAll()
         {
             Node current = this.head;

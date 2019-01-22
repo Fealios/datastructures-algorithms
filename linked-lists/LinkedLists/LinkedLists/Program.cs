@@ -19,6 +19,8 @@ namespace LinkedLists
             }
 
             myList.PrintAll();
+            int entry = int.Parse(Console.ReadLine());
+            myList.FindByValue(entry);
             Console.ReadKey();
         }
     }
